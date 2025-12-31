@@ -5,13 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ALANSITO-PAGE</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/filtro_nieve.css">
+<link rel="stylesheet" href="css/portada_inicio.css">
+<link rel="stylesheet" href="css/portada_temporada.css">
+<link rel="stylesheet" href="css/tarjetas_categorias.css">
+<link rel="stylesheet" href="css/notas.css">
+<link rel="stylesheet" href="css/redes_sociales.css">
 </head>
 
 <body>
 
+  <!-- MODAL -->
+  <div class="info-float-btn" onclick="openInfoModal()">
+    <i class="bi bi-geo-alt-fill"></i>Entregas
+  </div>
+
+  <div class="info-modal" id="infoModal">
+    <div class="info-modal-content">
+      <span class="info-close" onclick="closeInfoModal()">&times;</span>
+      <h3>Puntos de entrega:</h3>
+      <p>
+        <i class="bi bi-geo-alt-fill"></i> 
+        <a href="https://maps.app.goo.gl/9ksTR2z13D9RG1CU9">
+          <b>Dentro de UANL</b>
+        </a> 
+        <br>
+        Lunes a Viernes: 8am a 12pm
+
+        <br>
+        <br>
+
+
+        <i class="bi bi-geo-alt-fill"></i> 
+        <a href="https://maps.app.goo.gl/3MbKQarBbznr4BFA9">
+          <b>Apodaca Sur</b>
+        </a>
+        <br>
+        Dia y Hora que gustes
+      </p>
+
+      <h6>
+        Nota: <br>
+        selecciona la ubicacion para ver punto exacto en el maps
+      </h6>
+    </div>
+
+  </div>
+
+  <!-- FILTRO_NIEVE -->
   <div class="snow-container"></div>
 
+  <!-- PORTADA_INICIO -->
   <section class="top-slideshow" id="topSlideshow">
     <img src="portada/Portada1.jpg" class="slide active" alt="">
     <img src="portada/Portada2.jpg" class="slide" alt="">
@@ -25,15 +72,15 @@
 
   <div class="separadores-container">
 
+    <!-- PORTADA_TEMOPORADA -->
     <div class="holo-box-contenido">
-      <div class="holo-title">
-        Hola, Bienvenido!
+      <div class="newyear-content">
+        <div class="newyear-subtitle">FELIZ AÑO</div>
+        <div class="newyear-year">¡ 2026 !</div>
       </div>
-      <p class="navidad-texto">☃️ 🎄 TE DESEO UNA FELIZ NAVIDAD PARA ESTE 2025 ☃️ 🎄</p>
     </div>
 
-    
-
+    <!-- TARJETAS_CATEGORIAS -->
     <a href="https://flossy-licorice-80b.notion.site/AlanPage-2c595019bd878008b01ee06e0728371c?source=copy_link" target="_blank" style="text-decoration:none;">
       <div class="holo-card" style="background-image:url('portada-card/Portada3.jpg');">
         <div class="holo-card-title">VER SETS LEGO</div>
@@ -52,12 +99,14 @@
       </div>
     </a>
 
+    <!-- 
     <div class="holo-box-contacto">
       <div class="holo-title">Puntos de entrega:</div>
       <p><i class="bi bi-geo-alt-fill"></i> <a href="https://maps.app.goo.gl/9ksTR2z13D9RG1CU9"><b>Dentro de UANL</b></a> - Lunes a Viernes: 8am a 12pm</p>
       <p><i class="bi bi-geo-alt-fill"></i> <a href="https://maps.app.goo.gl/3MbKQarBbznr4BFA9"><b>Apodaca Sur</b></a> - Dia y Hora que gustes</p>
       <p><i class="bi bi-telephone-fill"></i>...</p>
     </div>
+    -->
 
   </div>
 

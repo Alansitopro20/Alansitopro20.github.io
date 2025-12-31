@@ -11,9 +11,8 @@
     }, 3000);
 })();
 
-
+// =============== ANIMACION DE NIEVE ===================
 const snowContainer = document.querySelector('.snow-container');
-
 function createSnowflake() {
     const snowflake = document.createElement('div');
     snowflake.classList.add('snowflake');
@@ -30,5 +29,15 @@ function createSnowflake() {
         snowflake.remove();
     }, 10000);
 }
-
 setInterval(createSnowflake, 200);
+
+
+
+// =============== BOTON DE UBICAIONES ===================
+function openInfoModal() {
+    document.getElementById('infoModal').style.display = 'flex';
+}
+
+function closeInfoModal() {
+    document.getElementById('infoModal').style.display = 'none';
+}

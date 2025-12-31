@@ -1,0 +1,95 @@
+.info-float-btn {
+    position: fixed;
+    right: 20px;
+    top: 10%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 54px;
+    background: linear-gradient(135deg, #000000, #020202);
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow:
+        0 0 15px rgba(255, 217, 47, 0.6),
+        0 0 30px rgba(229, 255, 0, 0.4);
+    transition: transform .3s ease, box-shadow .3s ease;
+
+    i {
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+    }
+}
+.info-float-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow:
+        0 0 25px rgba(47,59,255,0.9),
+        0 0 45px rgba(0,234,255,0.7);
+}
+
+
+
+.info-modal {
+    padding: 30px;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+
+    .info-modal-content {
+        width: 100%;
+        padding: 25px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: white;
+        position: relative;
+        animation: modalFadeUp .4s ease;
+        box-shadow:
+        0 0 25px rgba(224, 255, 47, 0.719),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
+
+        .info-close {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 40px;
+            cursor: pointer;
+            color: white;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #8faaff;
+        }
+
+        a{
+            color: yellowgreen;
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-size: 15px;
+            color: #ff8f8f;
+        }
+    }
+}
+
+@keyframes modalFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
