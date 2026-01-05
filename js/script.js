@@ -41,3 +41,47 @@ function openInfoModal() {
 function closeInfoModal() {
     document.getElementById('infoModal').style.display = 'none';
 }
+
+
+
+
+
+
+
+
+
+const carousel = document.querySelector('.lego-carousel');
+const items = Array.from(document.querySelectorAll('.lego-item'));
+const gap = 40;
+
+function updateActive() {
+  const center = carousel.scrollLeft + carousel.offsetWidth / 2;
+  items.forEach(item => {
+    const c = item.offsetLeft + item.offsetWidth / 2;
+    item.classList.toggle('active', Math.abs(center - c) < item.offsetWidth / 2);
+  });
+}
+
+carousel.addEventListener('scroll', updateActive);
+window.addEventListener('load', updateActive);
+
+/* BOTONES */
+document.querySelector('.nav.right').onclick = () => {
+  const w = items[0].offsetWidth + gap;
+  carousel.scrollBy({ left: w, behavior: 'smooth' });
+
+  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 5) {
+    setTimeout(() => carousel.scrollTo({ left: 0, behavior: 'smooth' }), 300);
+  }
+};
+
+document.querySelector('.nav.left').onclick = () => {
+  const w = items[0].offsetWidth + gap;
+  carousel.scrollBy({ left: -w, behavior: 'smooth' });
+
+  if (carousel.scrollLeft <= 5) {
+    setTimeout(() => carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'smooth' }), 300);
+  }
+};
+
+

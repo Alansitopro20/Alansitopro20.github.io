@@ -19,38 +19,32 @@
 <body>
 
   <!-- MODAL -->
-  <div class="info-float-btn" onclick="openInfoModal()">
-    <i class="bi bi-geo-alt-fill"></i>Entregas
-  </div>
-
   <div class="info-modal" id="infoModal">
     <div class="info-modal-content">
       <span class="info-close" onclick="closeInfoModal()">&times;</span>
       <h3>Puntos de entrega:</h3>
+      <br>
       <p>
         <i class="bi bi-geo-alt-fill"></i> 
-        <a href="https://maps.app.goo.gl/9ksTR2z13D9RG1CU9">
-          <b>Dentro de UANL</b>
-        </a> 
+        Dentro de UANL
         <br>
+        <i class="bi bi-clock-fill"></i>
         Lunes a Viernes: 8am a 12pm
-
+        <small style=" display:block; text-align:center; opacity:0.7; margin-bottom:10px; ">
+          <a href="https://maps.app.goo.gl/9ksTR2z13D9RG1CU9">Click aqui (para ver ubicacion exacta)</a>
+        </small>
         <br>
         <br>
-
-
         <i class="bi bi-geo-alt-fill"></i> 
-        <a href="https://maps.app.goo.gl/3MbKQarBbznr4BFA9">
-          <b>Apodaca Sur</b>
-        </a>
+        Apodaca Sur 
         <br>
+        <i class="bi bi-clock-fill"></i>
         Dia y Hora que gustes
+        <small style=" display:block; text-align:center; opacity:0.7; margin-bottom:10px; ">
+          <a href="https://maps.app.goo.gl/3MbKQarBbznr4BFA9">Click aqui (para ver ubicacion exacta)</a>
+        </small>
       </p>
 
-      <h6>
-        Nota: <br>
-        selecciona la ubicacion para ver punto exacto en el maps
-      </h6>
     </div>
 
   </div>
@@ -74,30 +68,70 @@
 
     <!-- PORTADA_TEMOPORADA -->
     <div class="holo-box-contenido">
-      <div class="newyear-content">
-        <div class="newyear-subtitle">FELIZ AÑO</div>
-        <div class="newyear-year">¡ 2026 !</div>
+      <div class="holo-rect" onclick="openInfoModal()">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span>Entregas:</span>
       </div>
+
+      
+      <div class="holo-rect">
+        <i class="bi bi-info-circle-fill"></i>
+        <span>Información</span>
+      </div>
+
+      <!-- 
+      <div class="holo-rect">
+        <i class="bi bi-whatsapp"></i>
+        <span>Contacto</span>
+      </div>
+
+      -->
+
     </div>
 
     <!-- TARJETAS_CATEGORIAS -->
+     <h1>SETS LEGO </h1>
     <a href="https://flossy-licorice-80b.notion.site/AlanPage-2c595019bd878008b01ee06e0728371c?source=copy_link" target="_blank" style="text-decoration:none;">
       <div class="holo-card" style="background-image:url('portada-card/Portada3.jpg');">
-        <div class="holo-card-title">VER SETS LEGO</div>
+        <div class="holo-card-title">VER</div>
       </div>
     </a>
 
-    <a href="https://flossy-licorice-80b.notion.site/26895019bd878071b00ad1101afa04a9?source=copy_link" target="_blank" style="text-decoration:none;">
-      <div class="holo-card" style="background-image:url('portada-card/Portada-DcComics.jpeg');">
-        <div class="holo-card-title"> VER FIGURAS DC COMICS</div>
-      </div>
-    </a>
+    <h1>FIGURAS LEGO</h1>
+    <div class="lego-wrapper">
+      <button class="nav left">&#10094;</button>    
 
-    <a href="https://flossy-licorice-80b.notion.site/26895019bd87806fae65eb5eda872025?source=copy_link" target="_blank" style="text-decoration:none;">
-      <div class="holo-card" style="background-image:url('portada-card/Portada-Marvel.jpg');">
-        <div class="holo-card-title"> VER FIGURAS MARVEL</div>
-      </div>
-    </a>
+      <div class="lego-carousel">
+        <a href="https://flossy-licorice-80b.notion.site/26895019bd878071b00ad1101afa04a9" 
+        target="_blank" class="lego-item">
+          <div class="lego-img">         
+            <img src="portada-card/Portada-DcComics.jpeg">
+          </div>
+          <span>DC COMICS</span>
+        </a>
+
+        <a href="https://flossy-licorice-80b.notion.site/26895019bd87806fae65eb5eda872025"
+        target="_blank" class="lego-item">
+          <div class="lego-img">
+            <img src="portada-card/Portada-Marvel.jpg">
+          </div>
+          <span>MARVEL</span>
+        </a>
+
+        <a href="#"
+        target="_blank" class="lego-item">
+          <div class="lego-img">
+            <img src="portada-card/Portada-StarWars.jpg">
+          </div>
+          <span>PROXIMAMENTE</span>
+        </a>
+    
+
+    <button class="nav right">&#10095;</button>
+  </div>
+
+
+  </div>
 
     <!-- 
     <div class="holo-box-contacto">
