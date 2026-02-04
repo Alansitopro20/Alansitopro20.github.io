@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Alan - Calendario Personal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="calendario.css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="cal-header">
+      <button onclick="cambiarMes(-1)">◀</button>
+      <strong id="mesTexto"></strong>
+      <button onclick="cambiarMes(1)">▶</button>
+    </div>
+
+    <div class="weekdays">
+      <div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div>
+      <div>Vie</div><div>Sáb</div><div>Dom</div>
+    </div>
+    <div class="calendar" id="calendar"></div>
+  </div>
+
+  <div class="card">
+    <button onclick="location.href='itinerario.html'">
+      📆 Itinerario semanal
+    </button>
+  </div>
+
+<!-- EVENTOS HOY -->
+<div class="card">
+  <h3>📌 Pendientes de hoy</h3>
+  <ul id="eventosHoy"></ul>
+</div>
+
+<!-- PENDIENTES LIBRES -->
+<div class="card">
+  <h3>📝 Pendientes personales</h3>
+
+  <input id="buscar" placeholder="Buscar por texto o categoría">
+
+  <form id="formLibre">
+    <input id="libreTitulo" placeholder="Descripción" required>
+    <input list="categorias" id="libreCategoria" placeholder="Categoría">
+    <datalist id="categorias"></datalist>
+    <button>Agregar</button>
+  </form>
+
+  <ul id="listaLibres"></ul>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3>Agregar evento</h3>
+    <input id="titulo" placeholder="Título">
+    <input type="time" id="hora">
+    <button onclick="guardarEvento()">Guardar</button>
+    <button class="danger" onclick="cerrarModal()">Cerrar</button>
+    <ul id="eventosDia"></ul>
+  </div>
+</div>
+
+<script src="calendario.js"></script>
+
+</body>
+</html>
