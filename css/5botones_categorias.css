@@ -1,0 +1,44 @@
+.category-header {
+  padding: 0px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0),
+    rgba(2, 6, 23, 0),
+    transparent
+  );
+
+  h2 {
+    font-size: clamp(26px, 6vw, 34px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(248, 241, 255, 0.5);;
+  }
+}
+
+.category-bar {
+  position: sticky;
+  top: 60px;
+  z-index: 999;
+  display: flex;
+  gap: 10px;
+  padding: 0px 14px;
+  background: rgba(2, 6, 23, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  overflow-x: auto;
+
+  button {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(252, 245, 245, 0.993);
+    background-color: rgb(81, 69, 92);
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .25s ease;
+  }
+}
+
+

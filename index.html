@@ -7,16 +7,35 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/modal.css">
-<link rel="stylesheet" href="css/filtro_nieve.css">
-<link rel="stylesheet" href="css/portada_inicio.css">
-<link rel="stylesheet" href="css/portada_temporada.css">
-<link rel="stylesheet" href="css/tarjetas_categorias.css">
+
+<link rel="stylesheet" href="css/1navbar.css">
+<link rel="stylesheet" href="css/2modal.css">
+<link rel="stylesheet" href="css/3filtro_nieve.css">
+<link rel="stylesheet" href="css/4portada_inicio.css">
+<link rel="stylesheet" href="css/5botones_categorias.css">
+<link rel="stylesheet" href="css/6tarjetas_categorias.css">
 <link rel="stylesheet" href="css/notas.css">
 <link rel="stylesheet" href="css/redes_sociales.css">
 </head>
 
 <body>
+  
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="portada/Portada2.jpg" alt="Logo">
+        <span>AlanStore</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html" >Inicio</a></li>
+        <li><button onclick="openInfoModal()">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span>Entregas:</span>
+        </button></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- MODAL -->
   <div class="info-modal" id="infoModal">
@@ -60,50 +79,71 @@
     <img src="portada/Portada1.jpg" class="slide active" alt="">
     <img src="portada/Portada2.jpg" class="slide" alt="">
     <img src="portada/Portada3.jpg" class="slide" alt="">
-
-    <div class="top-caption">
-      AlanStore
-    </div>
-
   </section>
+
+  <!-- BOTONES_CATEGORIAS -->
+  <div class="category-bar">
+    <button onclick="scrollToSection('sets-lego')">Sets LEGO</button>
+    <button onclick="scrollToSection('figuras-lego')">Figuras LEGO</button>
+  </div>
+
 
   <div class="separadores-container">
 
-    <!-- PORTADA_TEMOPORADA -->
-    <div class="holo-box-contenido">
-      <div class="holo-rect" onclick="openInfoModal()">
-        <i class="bi bi-geo-alt-fill"></i>
-        <span>Entregas:</span>
+    <div class="category-title">
+      <h1 id="sets-lego">SETS LEGO</h1>
+      <div class="subcategory-dropdown">
+        <button class="subcategory-btn">Categorías ▾</button>
+        <div class="subcategory-menu">
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd8780c2a3f1000c33d4fc6a&source=copy_link" target="_blank">MINECRAFT</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd878057ba1a000c7d80afb5&source=copy_link" target="_blank">STAR WARS</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd8780f692ee000c662316b8&source=copy_link" target="_blank">FLORES</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd878052a4fc000cbd432234&source=copy_link" target="_blank">CREATOR</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd878049aa21000c3d1909b2&source=copy_link" target="_blank">SPIDER-MAN</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd87808e81b1000c07e5cfd1&source=copy_link" target="_blank">MARVEL</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd87809ba76b000c1222f857&source=copy_link" target="_blank">SPEED CHAMPIONS</a>
+
+        </div>
       </div>
-
-      
-      <div class="holo-rect">
-        <i class="bi bi-info-circle-fill"></i>
-        <span>Información</span>
-      </div>
-
-      <!-- 
-      <div class="holo-rect">
-        <i class="bi bi-whatsapp"></i>
-        <span>Contacto</span>
-      </div>
-
-      -->
-
     </div>
-
-    <!-- TARJETAS_CATEGORIAS -->
-     <h1>SETS LEGO </h1>
-    <a href="https://flossy-licorice-80b.notion.site/AlanPage-2c595019bd878008b01ee06e0728371c?source=copy_link" target="_blank" style="text-decoration:none;">
+    <a onclick="openSubcatModal()" target="_blank" style="text-decoration:none;">
       <div class="holo-card" style="background-image:url('portada-card/Portada3.jpg');">
-        <div class="holo-card-title">VER</div>
+        <div class="holo-card-title">VER VARIEDAD DE SETS</div>
       </div>
     </a>
+    <div class="subcat-modal" id="subcatModal">
+      <div class="subcat-modal-content">
+        <span class="subcat-close" onclick="closeSubcatModal()">&times;</span>
+        <h3>Selecciona la linea de LEGO</h3>
+        <div class="subcat-grid">
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd8780c2a3f1000c33d4fc6a&source=copy_link" target="_blank">MINECRAFT</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd878057ba1a000c7d80afb5&source=copy_link" target="_blank">STAR WARS</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd8780f692ee000c662316b8&source=copy_link" target="_blank">FLORES</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd878052a4fc000cbd432234&source=copy_link" target="_blank">CREATOR</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd878049aa21000c3d1909b2&source=copy_link" target="_blank">SPIDER-MAN</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd87808e81b1000c07e5cfd1&source=copy_link" target="_blank">MARVEL</a>
+          <a href="https://www.notion.so/2c595019bd878040b2a0deb5bc7b0f17?v=2df95019bd87809ba76b000c1222f857&source=copy_link" target="_blank">SPEED CHAMPIONS</a>
+          <!-- puedes meter 30 sin problema -->
+        </div>
+      </div>
+    </div>
 
-    <h1>FIGURAS LEGO</h1>
+
+
+    <div class="category-title">
+      <h1 id="figuras-lego">FIGURAS LEGO</h1>
+      <div class="subcategory-dropdown">
+        <button class="subcategory-btn">
+          Categorías ▾
+        </button>
+        <div class="subcategory-menu">
+          <a href="https://flossy-licorice-80b.notion.site/26895019bd878071b00ad1101afa04a9" target="_blank">DC Comics</a>
+          <a href="https://flossy-licorice-80b.notion.site/26895019bd87806fae65eb5eda872025" target="_blank">Marvel</a>
+        </div>
+      </div>
+    </div>
     <div class="lego-wrapper">
       <button class="nav left">&#10094;</button>    
-
       <div class="lego-carousel">
         <a href="https://flossy-licorice-80b.notion.site/26895019bd878071b00ad1101afa04a9" 
         target="_blank" class="lego-item">
@@ -112,7 +152,6 @@
           </div>
           <span>DC COMICS</span>
         </a>
-
         <a href="https://flossy-licorice-80b.notion.site/26895019bd87806fae65eb5eda872025"
         target="_blank" class="lego-item">
           <div class="lego-img">
@@ -120,7 +159,6 @@
           </div>
           <span>MARVEL</span>
         </a>
-
         <a href="#"
         target="_blank" class="lego-item">
           <div class="lego-img">
@@ -128,13 +166,11 @@
           </div>
           <span>PROXIMAMENTE</span>
         </a>
-    
-
     <button class="nav right">&#10095;</button>
+  
   </div>
-
-
-  </div>
+  
+</div>
 
     <!-- 
     <div class="holo-box-contacto">
@@ -148,10 +184,10 @@
   </div>
 
   <div class="social-bar">
-    <a href="https://facebook.com" style="color: rgba(253, 253, 253, 0);" target="_blank"><i class="bi bi-facebook"></i></a>
-    <a href="https://instagram.com" style="color: rgba(253, 253, 253, 0);" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://tiktok.com" style="color: rgba(253, 253, 253, 0);" target="_blank"><i class="bi bi-tiktok"></i></a>
-    <a href="calendario.html" style="color: rgba(253, 253, 253, 0);" target="_blank"><i class="bi bi-youtube"></i></a>
+    <a href="https://facebook.com" style="color: rgb(253, 253, 253);" target="_blank"><i class="bi bi-facebook"></i></a>
+    <a href="https://instagram.com" style="color: rgb(253, 253, 253);" target="_blank"><i class="bi bi-instagram"></i></a>
+    <a href="https://tiktok.com" style="color: rgb(253, 253, 253);" target="_blank"><i class="bi bi-tiktok"></i></a>
+    <!-- <a href="calendario/calendario.html" style="color: rgba(253, 253, 253, 0);" target="_blank"><i class="bi bi-youtube"></i></a> -->
   </div>
 
   <script src="js/script.js"></script>
