@@ -1,0 +1,260 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+body{
+background:#0b0b12;
+min-height:200vh;
+color:white;
+}
+
+
+/* ---------------- NAVBAR ---------------- */
+.navbar{
+    position:sticky;
+    top:0;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 20px;
+    background:rgba(20,20,35,0.7);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255, 255, 255, 0.719);
+    z-index:1000;
+
+    .logo-area{
+        display:flex;
+        align-items:center;
+        gap:10px;
+
+        .site-name{
+            font-size:18px;
+            font-weight:600;
+            color:#e5e7ff;
+        }
+    }
+}
+
+.nav-links{
+    display:flex;
+    gap:15px;
+
+    a{
+        text-decoration:none;
+        padding:8px 16px;
+        border-radius:8px;
+        color:#d8dbff;
+        font-size:14px;
+        transition:.25s;
+        background:transparent;
+    }
+}
+
+.nav-links a:hover{
+    background:linear-gradient(45deg,#4f6cff,#7b3cff);
+    color:white;
+}
+
+.nav-links .primary{
+    background:linear-gradient(45deg,#4f6cff,#7b3cff);
+    color:white;
+}
+
+.menu-btn{
+    display:none;
+    font-size:26px;
+    color:white;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    .nav-links{
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:#1a1a2e;
+        flex-direction:column;
+        padding:15px;
+        border-radius:12px;
+        display:none;
+    }
+    .nav-links.show{
+        display:flex;
+    }
+    .menu-btn{
+        display:block;
+    }
+}
+
+
+
+/* SECCIONES */
+.seccion{
+    max-width:1100px;
+    margin:auto;
+    padding:20px 20px;
+}
+.seccion h2{
+    font-size:32px;
+    margin-bottom:10px;
+    color:#c9ff04;
+}
+
+.grid-piezas{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.card-categoria{
+    position:relative;
+    height:100px;
+    border-radius:22px;
+    overflow:hidden;
+    text-decoration:none;
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card-categoria img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card-categoria::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+height:60%;
+
+background:linear-gradient(to top,rgba(0,0,0,.8),transparent);
+
+}
+
+.card-categoria:hover{
+
+transform:translateY(-6px) scale(1.02);
+
+box-shadow:0 15px 35px rgba(79,108,255,0.35);
+
+}
+
+.card-categoria:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+/* CARD GRANDE */
+
+.card-grande{
+
+display:block;
+
+height:260px;
+
+border-radius:22px;
+
+overflow:hidden;
+
+position:relative;
+
+text-decoration:none;
+
+margin-bottom:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+.card-grande img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
+.card-grande::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+height:60%;
+
+background:linear-gradient(to top,rgba(0,0,0,.8),transparent);
+
+}
+
+
+/* TEXTO */
+
+.info{
+
+position:absolute;
+
+bottom:20px;
+
+left:20px;
+
+z-index:2;
+
+}
+
+.info h3{
+
+color:rgb(255, 255, 255);
+
+font-size:25px;
+
+}
+
+/* ================================================================= */
+/* ========================= MENU INDICE =========================== */
+/* ================================================================= */
+.indice{
+    position:fixed;
+    bottom :50px;
+    right:25px;
+    background:#1f1f42;
+    padding:10px;
+    border-radius:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+    z-index:999;
+
+    a{
+        text-decoration:none;
+        color:#cfd2ff;
+        padding:8px 14px;
+        border-radius:8px;
+        transition:.25s;
+    }
+}
+.indice a:hover{
+    background:#4f6cff;
+    color:white;
+}
+.indice a.active{
+    background:linear-gradient(45deg,#4f6cff,#7b3cff);
+    color:white;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Style.css">
+<title>AlansPage - 2</title>
+</head>
+
+
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo-area">
+        <div class="site-name">AlanPage - 2</div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="#">Inicio</a>
+        <a href="#">Catálogo</a>
+        <a href="#">Contacto</a>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- MENU INDICE -->
+<div class="indice">
+    <a href="#piezas">Piezas</a>
+    <a href="#mascotas">Mascotas</a>
+    <a href="#cascos">Cascos</a>
+</div>
+
+
+<!-- SECCION PIEZAS -->
+<section id="piezas" class="seccion">
+    <h2>Moldeo</h2>
+    <div class="grid-piezas">
+        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ff95019bd878031a160000cd75190e9&source=copy_link" class="card-categoria">
+            <img src="portadaCabeza.png">
+            <div class="info"><h3>HEAD</h3></div>
+        </a>
+        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2e695019bd8780e1a228000cade44104&source=copy_link" class="card-categoria">
+            <img src="portadaManos.png">
+            <div class="info"><h3>HANDS</h3></div>
+        </a>
+        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2eb95019bd878008a959000cbe37decd&source=copy_link" class="card-categoria">
+            <img src="portadaBrazoDouble.png">
+            <div class="info"><h3>ARM LEFT DOUBLE </h3></div>
+        </a>
+        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2e695019bd8780a2a711000c9fadc543&source=copy_link" class="card-categoria">
+            <img src="portadaTorso.png">
+            <div class="info"><h3>TORSO PLAIN</h3></div>
+        </a>
+        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd87802e9bae000c9df95eb2&source=copy_link" class="card-categoria">
+            <img src="portadaBrazoL.png">
+            <div class="info"><h3>ARM LEFT</h3></div>
+        </a>
+        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd8780c9bb89000c9672076e&source=copy_link" class="card-categoria">
+            <img src="portadaBrazoR.png">
+            <div class="info"><h3>ARM RIGHT</h3></div>
+        </a>
+        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd87800fbafc000caef32a4e&source=copy_link" class="card-categoria">
+            <img src="portadaBrazoP.png">
+            <div class="info"><h3>ARM PAIRS</h3></div>
+        </a>
+        
+    </div>
+</section>
+
+
+<!-- SECCION MASCOTAS -->
+<section id="mascotas" class="seccion">
+    <h2>Mascotas</h2>
+    <a href="https://flossy-licorice-80b.notion.site/Venta-Mascotas-LEGO-31495019bd8780ab9f7bc860d324d473?source=copy_link" class="card-grande">
+        <img src="portadaMascotas.png">
+        <div class="info"><h3>Ver Mascotas</h3></div>
+    </a>
+</section>
+
+
+<!-- SECCION CASCOS -->
+<section id="cascos" class="seccion">
+    <h2>Cascos</h2>
+    <a href="https://flossy-licorice-80b.notion.site/Venta-Cascos-Lego-31d95019bd878035ba6cf595f560bc65?source=copy_link" class="card-grande">
+        <img src="portadaCascos.png">
+        <div class="info"><h3>Ver Cascos</h3></div>
+    </a>
+</section>
+
+<script>
+
+/* MENU MOBILE */
+
+function toggleMenu(){
+
+document.getElementById("navLinks").classList.toggle("show")
+
+}
+
+const sections=document.querySelectorAll("section")
+const navLinks=document.querySelectorAll(".indice a")
+
+window.addEventListener("scroll",()=>{
+
+let current=""
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-200
+
+if(pageYOffset>=sectionTop){
+
+current=section.getAttribute("id")
+
+}
+
+})
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active")
+
+if(link.getAttribute("href").includes(current)){
+
+link.classList.add("active")
+
+}
+
+})
+
+})
+
+
+
+</script>
+
+</body>
+</html>
