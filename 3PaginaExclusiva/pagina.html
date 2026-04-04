@@ -3,134 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayoreo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="Style.css">
-<title>AlansPage - 2</title>
 </head>
 
 
 <body>
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo-area">
-        <div class="site-name">AlanPage - 2</div>
-    </div>
-    <div class="nav-links" id="navLinks">
-        <a href="#">Inicio</a>
-        <a href="#">Catálogo</a>
-        <a href="#">Contacto</a>
-    </div>
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
-</nav>
+    <nav>
+        <div class="logo">MiMarca</div>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#mascotas">MASCOTAS</a>
+                <a href="#moldeo">MOLDEO</a>
+                <a href="#cascos">CASCOS</a>
+                <a href="#capas">CAPAS</a>
+                <a href="#cabellos">CABELLOS</a>
+            </div>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        </div>
+        <div class="dropdown" id="dropdown">
+            <a href="#mascotas">MASCOTAS</a>
+                <a href="#moldeo">MOLDEO</a>
+                <a href="#cascos">CASCOS</a>
+                <a href="#capas">CAPAS</a>
+                <a href="#cabellos">CABELLOS</a>
+        </div>
+    </nav>
 
-<!-- MENU INDICE -->
-<div class="indice">
-    <a href="#piezas">Piezas</a>
-    <a href="#mascotas">Mascotas</a>
-    <a href="#cascos">Cascos</a>
-</div>
+    <section id="mascotas" class="section">
+        <div class="glass-card piezas">
+            <div class="card-content">
+                <h1>MASCOTAS</h1>
+                <a href="https://flossy-licorice-80b.notion.site/LEGO-Venta-Mascotas-31495019bd8780ab9f7bc860d324d473?source=copy_link">
+                    <button class="btn">Ver más</button>
+                </a>
+            </div>
+            <div class="card-img">
+                <img src="MacotaFoto.png">
+            </div>
+        </div>
+    </section>
 
+    <section id="moldeo" class="section">
+        <div class="glass-card mascotas-card">
+            <div class="top-row">
+                <div class="card-img">
+                    <img src="MoldeoFoto.png">
+                </div>
+                <div class="card-content">
+                    <h1>MOLDEO</h1>
+                    <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2e595019bd87804c9d41000cf9813d30&source=copy_link">
+                        <button class="btn">Ver más</button>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="mini-card">
+                        <img src="FotoCabeza.png">
+                        <p>HEAD</p>
+                        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ff95019bd878031a160000cd75190e9&source=copy_link">
+                            <button >Ver</button>
+                        </a>
+                    </div>
 
-<!-- SECCION PIEZAS -->
-<section id="piezas" class="seccion">
-    <h2>Moldeo</h2>
-    <div class="grid-piezas">
-        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ff95019bd878031a160000cd75190e9&source=copy_link" class="card-categoria">
-            <img src="portadaCabeza.png">
-            <div class="info"><h3>HEAD</h3></div>
-        </a>
-        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2e695019bd8780e1a228000cade44104&source=copy_link" class="card-categoria">
-            <img src="portadaManos.png">
-            <div class="info"><h3>HANDS</h3></div>
-        </a>
-        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2eb95019bd878008a959000cbe37decd&source=copy_link" class="card-categoria">
-            <img src="portadaBrazoDouble.png">
-            <div class="info"><h3>ARM LEFT DOUBLE </h3></div>
-        </a>
-        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2e695019bd8780a2a711000c9fadc543&source=copy_link" class="card-categoria">
-            <img src="portadaTorso.png">
-            <div class="info"><h3>TORSO PLAIN</h3></div>
-        </a>
-        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd87802e9bae000c9df95eb2&source=copy_link" class="card-categoria">
-            <img src="portadaBrazoL.png">
-            <div class="info"><h3>ARM LEFT</h3></div>
-        </a>
-        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd8780c9bb89000c9672076e&source=copy_link" class="card-categoria">
-            <img src="portadaBrazoR.png">
-            <div class="info"><h3>ARM RIGHT</h3></div>
-        </a>
-        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd87800fbafc000caef32a4e&source=copy_link" class="card-categoria">
-            <img src="portadaBrazoP.png">
-            <div class="info"><h3>ARM PAIRS</h3></div>
-        </a>
+                    <div class="mini-card">
+                        <img src="FotoTorso.png">
+                        <p>TORSO PLAIN</p>
+                        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2e695019bd8780a2a711000c9fadc543&source=copy_link">
+                            <button>Ver</button>
+                        </a>
+                    </div>
+
+                    <div class="mini-card">
+                        <img src="FotoBrazoPar.png">
+                        <p>ARM PAIRS</p>
+                        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd87800fbafc000caef32a4e&source=copy_link">
+                            <button>Ver</button>
+                        </a>
+                    </div>
+
+                    <div class="mini-card">
+                        <img src="FotoMano.png">
+                        <p>HANDS</p>
+                        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2e695019bd8780e1a228000cade44104&source=copy_link">
+                            <button>Ver</button>
+                        </a>
+                    </div>
+
+                    <div class="mini-card">
+                        <img src="FotoBrazoDerecho.png">
+                        <p>ARM RIGHT</p>
+                        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd8780c9bb89000c9672076e&source=copy_link">
+                            <button>Ver</button>
+                        </a>
+                    </div>
+
+                    <div class="mini-card">
+                        <img src="FotoBrazoIzquierdo.png">
+                        <p>ARM LEFT</p>
+                        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2ee95019bd87802e9bae000c9df95eb2&source=copy_link">
+                            <button>Ver</button>
+                        </a>
+                    </div>
+
+                    <div class="mini-card">
+                        <img src="FotoBrazoDoble.png">
+                        <p>ARM LEFT DOUBLE</p>
+                        <a href="https://www.notion.so/2e595019bd8780c4a08ae91621ead510?v=2eb95019bd878008a959000cbe37decd&source=copy_link">
+                            <button>Ver</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cascos" class="section">
+        <div class="glass-card piezas">
+            <div class="card-content">
+                <h1>CASCOS</h1>
+                <a href="https://flossy-licorice-80b.notion.site/LEGO-Venta-Cascos-31d95019bd878035ba6cf595f560bc65?source=copy_link">
+                    <button class="btn">Ver más</button>
+                </a>
+            </div>
+            <div class="card-img">
+                <img src="CascoFoto.png">
+            </div>
+        </div>
+    </section>
+
+    <section id="capas" class="section">
+        <div class="glass-card piezas">
+            <div class="card-img">
+                <img src="CapaFoto.png">
+            </div>
+            <div class="card-content">
+                <h1>CAPAS</h1>
+                <p style="color: red;">proximamente</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="cabellos" class="section">
+        <div class="glass-card piezas">
+            <div class="card-content">
+                <h1>CABELLOS</h1>
+                <p style="color: red;">proximamente</p>
         
-    </div>
-</section>
-
-
-<!-- SECCION MASCOTAS -->
-<section id="mascotas" class="seccion">
-    <h2>Mascotas</h2>
-    <a href="https://flossy-licorice-80b.notion.site/Venta-Mascotas-LEGO-31495019bd8780ab9f7bc860d324d473?source=copy_link" class="card-grande">
-        <img src="portadaMascotas.png">
-        <div class="info"><h3>Ver Mascotas</h3></div>
-    </a>
-</section>
-
-
-<!-- SECCION CASCOS -->
-<section id="cascos" class="seccion">
-    <h2>Cascos</h2>
-    <a href="https://flossy-licorice-80b.notion.site/Venta-Cascos-Lego-31d95019bd878035ba6cf595f560bc65?source=copy_link" class="card-grande">
-        <img src="portadaCascos.png">
-        <div class="info"><h3>Ver Cascos</h3></div>
-    </a>
-</section>
+            </div>
+            <div class="card-img">
+                <img src="CabelloFoto.png">
+            </div>
+            
+        </div>
+    </section>
 
 <script>
-
-/* MENU MOBILE */
-
 function toggleMenu(){
-
-document.getElementById("navLinks").classList.toggle("show")
-
+  const menu = document.getElementById("dropdown");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
-const sections=document.querySelectorAll("section")
-const navLinks=document.querySelectorAll(".indice a")
+document.addEventListener("click", function(e){
+  const menu = document.getElementById("dropdown");
+  const btn = document.querySelector(".menu-btn");
 
-window.addEventListener("scroll",()=>{
-
-let current=""
-
-sections.forEach(section=>{
-
-const sectionTop=section.offsetTop-200
-
-if(pageYOffset>=sectionTop){
-
-current=section.getAttribute("id")
-
-}
-
-})
-
-navLinks.forEach(link=>{
-
-link.classList.remove("active")
-
-if(link.getAttribute("href").includes(current)){
-
-link.classList.add("active")
-
-}
-
-})
-
-})
-
-
-
+  if(!menu.contains(e.target) && e.target !== btn){
+    menu.style.display = "none";
+  }
+});
 </script>
 
 </body>
