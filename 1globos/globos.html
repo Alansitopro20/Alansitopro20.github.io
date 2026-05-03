@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burbuja Mágica - AlanStore</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+  </style>
+  <link rel="stylesheet" href="globos.css">
+
+</head>
+<body>
+
+  <header>
+    <div class="header-slider">
+      <img src="GlobosPortada/Graduacion1.jpeg">
+      <img src="GlobosPortada/Cumpleaños1.jpeg">
+      <img src="GlobosPortada/Bautizo1.jpeg">
+      <img src="GlobosPortada/Graduacion2.jpeg">
+      <img src="GlobosPortada/Cumpleaños2.jpeg">
+    </div>
+    <div class="header-overlay">
+      <div>
+        <h1>---</h1>
+        <p>---</p>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="catalog-grid">
+    <section class="category-section">
+      <h1 class="category-title">Cumpleaños</h2>
+        <div class="carousel-wrapper">
+          <button class="carousel-btn left" onclick="scrollCarousel(this, -1)">‹</button>
+
+          <div class="carousel">
+
+            <div class="card">
+              <img src="Globo Burbuja.jpg" class="card-img">
+              <div class="card-body">
+                <h2>Galaxy Spark</h2>
+                <span class="price-tag">$350 MXN</span>
+                <button class="btn-details" onclick="openModal('galaxy')">Ver detalles</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="Globo Burbuja.jpg" class="card-img">
+              <div class="card-body">
+                <h2>Birthday Neon</h2>
+                <span class="price-tag">$390 MXN</span>
+                <button class="btn-details" onclick="openModal('galaxy')">Ver detalles</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="Globo Burbuja.jpg" class="card-img">
+              <div class="card-body">
+                <h2>Birthday Neon</h2>
+                <span class="price-tag">$390 MXN</span>
+                <button class="btn-details" onclick="openModal('galaxy')">Ver detalles</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="Globo Burbuja.jpg" class="card-img">
+              <div class="card-body">
+                <h2>Birthday Neon</h2>
+                <span class="price-tag">$390 MXN</span>
+                <button class="btn-details" onclick="openModal('galaxy')">Ver detalles</button>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-btn right" onclick="scrollCarousel(this, 1)">›</button>
+        </div>
+      </section>
+
+  <!-- ================= SAN VALENTÍN ================= -->
+  <section class="category-section">
+    <h2 class="category-title"> San Valentín</h2>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="scrollCarousel(this, -1)">‹</button>
+
+      <div class="carousel">
+        <div class="card">
+          <img src="Globo Burbuja.jpg" class="card-img">
+          <div class="card-body">
+            <h2>Love Crystal</h2>
+            <span class="price-tag">$520 MXN</span>
+            <button class="btn-details" onclick="openModal('floral')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Globo Burbuja.jpg" class="card-img">
+          <div class="card-body">
+            <h2>Red Passion</h2>
+            <span class="price-tag">$580 MXN</span>
+            <button class="btn-details" onclick="openModal('floral')">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn right" onclick="scrollCarousel(this, 1)">›</button>
+    </div>
+  </section>
+
+  <!-- ================= GRADUACIÓN ================= -->
+  <section class="category-section">
+    <h2 class="category-title"> Graduación</h2>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="scrollCarousel(this, -1)">‹</button>
+
+      <div class="carousel">
+        <div class="card">
+          <img src="Globo Burbuja.jpg" class="card-img">
+          <div class="card-body">
+            <h2>Graduate Gold</h2>
+            <span class="price-tag">$450 MXN</span>
+            <button class="btn-details" onclick="openModal('galaxy')">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="Globo Burbuja.jpg" class="card-img">
+          <div class="card-body">
+            <h2>Class of 2026</h2>
+            <span class="price-tag">$480 MXN</span>
+            <button class="btn-details" onclick="openModal('galaxy')">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn right" onclick="scrollCarousel(this, 1)">›</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- MODAL -->
+<div id="detailsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle">Detalles del Producto</h2>
+
+    <p>Incluye: Globo Burbuja 24", Helio, Vinil personalizado.</p>
+
+    <h3>Extras disponibles</h3>
+    <div class="extra-item"><span>✨ Luces LED</span> <span>+$80</span></div>
+    <div class="extra-item"><span>🎨 Pintura interna</span> <span>+$50</span></div>
+    <div class="extra-item"><span>🎈 Mini globos base</span> <span>+$40</span></div>
+    <div class="extra-item"><span>🎀 Moño premium</span> <span>+$30</span></div>
+
+    <button class="btn-details whatsapp-btn">
+      Pedir por WhatsApp
+    </button>
+  </div>
+</div>
+
+<script src="globos.js"></script>
+</body>
+</html>

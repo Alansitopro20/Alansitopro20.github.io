@@ -84,7 +84,7 @@
    CATÁLOGO DE CATEGORIA DE SETS
    =============================================================================================
 */
-.subcat-grid {
+/*.subcat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
@@ -150,6 +150,80 @@
     height: 110px;
   }
 }
+*/
+
+
+
+
+
+
+/* CONTENEDOR */
+.mobile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 15px;
+}
+
+/* CARD */
+.mini-card {
+  background: linear-gradient(135deg, #1c1c1c, #2a2222);
+  border-radius: 14px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+
+  box-shadow: 0 5px 12px rgba(255,0,0,0.15);
+  transition: 0.3s;
+}
+
+/* IMAGEN */
+.mini-card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+/* TITULO */
+.mini-card h4 {
+  font-size: 11px;
+  margin: 4px 0;
+}
+
+/* BOTÓN */
+.mini-card button {
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: none;
+  background: #00d26a;
+  font-weight: bold;
+}
+
+/* HOVER */
+.mini-card:hover {
+  transform: scale(1.05);
+}
+
+/* DESKTOP */
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .cards {
+    display: none;
+  }
+
+  .mobile-grid {
+    display: grid;
+  }
+}
+
+
 
 
 /* =============================================================================================
